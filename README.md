@@ -6,7 +6,7 @@ via sensu.
 ## Installation
 
 * login as root
-* clone this installation in /opt/repo/scripts
+* clone this installation in /opt/repo
 * add urls to scripts/routes.txt
 
 If something results in errors or warnings, joep.vermaat@naturalis.nl 

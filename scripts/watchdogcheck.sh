@@ -13,12 +13,12 @@ fi
 for lvl in $NORMAL_ERRORS; do
     while read -r line; do
         COUNT_NORMAL=$((COUNT_NORMAL+1))
-    done < <(docker-compose exec -T drupal drush ws --severity=$lvl --format=$FORMAT 2> /dev/null)
+    done < <(docker-compose exec -T drupal drush ws --severity=$lvl --format=$FORMAT --pipe)
 done
 for lvl in $SEVERE_ERRORS; do
     while read -r line; do
         COUNT_SEVERE=$((COUNT_SEVERE+1))
-    done < <(docker-compose exec -T drupal drush ws --severity=$lvl --format=$FORMAT 2> /dev/null)
+    done < <(docker-compose exec -T drupal drush ws --severity=$lvl --format=$FORMAT --pipe)
 done
 echo "Log messages: $COUNT_SEVERE severe, $COUNT_NORMAL normal"
 if [ $COUNT_SEVERE -gt 0 ]

@@ -59,6 +59,19 @@ hand:
 drush ws --severity=0
 ```
 
+To clear the log of error message which are either out of date or already
+seen to you can clear the watchdog log with command:
+
+```
+drush watchdog-delete all
+```
+
+or just the message of certain severity level
+
+```
+drush watchdog-delete --severity=2
+```
+
 
 ## scripts/webcheck.sh
 

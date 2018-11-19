@@ -15,7 +15,7 @@ information center.
 
 ## Drupalchk.sh
 
-This scripts scans the scripts directory and calls every executable
+This script scans the scripts directory and calls every executable
 script in this directory. It keeps track of the error level of each
 executed script and puts it through to the sensu system.
 

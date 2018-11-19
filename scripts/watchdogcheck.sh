@@ -21,7 +21,6 @@ for lvl in $SEVERE_ERRORS; do
     done < <(docker-compose exec -T drupal drush ws --severity=$lvl --format=$FORMAT 2> /dev/null)
 done
 echo "Log messages: $COUNT_SEVERE severe, $COUNT_NORMAL normal"
-cd -
 if [ $COUNT_SEVERE -gt 0 ]
 then
     exit 2

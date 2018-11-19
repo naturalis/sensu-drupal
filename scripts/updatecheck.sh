@@ -13,7 +13,6 @@ while read -r line
 do
     NORMALUPDATES=$((NORMALUPDATES+1))
 done < <(docker-compose exec -T drupal drush ups --format=list 2> /dev/null)
-cd -
 echo "Updates: $SECURITYUPDATES security, $NORMALUPDATES normal"
 if [ $SECURITYUPDATES -gt 0 ]
 then

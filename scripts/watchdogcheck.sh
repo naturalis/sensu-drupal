@@ -4,9 +4,9 @@
 FORMAT=$1
 COUNT_SEVERE=0
 COUNT_NORMAL=0
-SEVERE_ERRORS="0 1"
-NORMAL_ERRORS="2 3"
-cd /opt/docker-drupal
+SEVERE_ERRORS="1 2"
+NORMAL_ERRORS="3 4"
+cd /opt/composeproject
 if [ ! $FORMAT ] ; then
     FORMAT='list'
 fi
